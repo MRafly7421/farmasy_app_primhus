@@ -2,7 +2,7 @@
 
 ### Impor file sql ke database
 1. Buat database baru (Nama disarankan: db_farmasy_app_primhus)
-2. Buka tab import, lalu impor file ".sql" nya
+2. Buka tab import, lalu impor file "db_farmasy_app_primhus.sql" nya
 
 ### Ubah konfigurasi koneksi
 1. Buka "koneksi.php" nya pada direktori "/config/"
