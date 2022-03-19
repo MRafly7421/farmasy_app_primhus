@@ -38,7 +38,7 @@
                     <h1 class="signup__title">SIGN UP</h1>
                 </div>
             </div>
-            <form method="post" action="config/action_signup.php" class="row g-3 justify-content-center">
+            <form method="post" action="controller/action_signup.php" class="row g-3 justify-content-center">
                 <div class="form-row col-10">
                     <div class="form-group col-md-6">
                         <label class="signup__label" for="email">Email</label>

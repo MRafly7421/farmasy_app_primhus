@@ -91,7 +91,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right menu__account__box" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item text-center menu__account__link" href="#">Temp</a>
-                        <a class="dropdown-item text-center menu__account__link logout__link" href="../../config/logout.php">Logout</a>
+                        <a class="dropdown-item text-center menu__account__link logout__link" href="../../controller/logout.php">Logout</a>
                     </div>
                     
                 </div>
@@ -113,64 +113,52 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>01-01-2021</td>
-                            <td>A000111</td>
-                            <td>Paracetamol</td>
-                            <td>100</td>
-                            <td>Box</td>
-                            <td>
-                                <form action="../../config/action_edit_obat_masuk.php" method="post">
-                                    <button class="btn btn-primary" name="buttonEdit" value="">
-                                        Edit
-                                    </button>
-                                    <button class="btn btn-danger" name="buttonHapus" value="">
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>01-01-2021</td>
-                            <td>A000222</td>
-                            <td>Kapsida</td>
-                            <td>100</td>
-                            <td>Botol</td>
-                            <td>
-                                <form action="../../config/action_edit_obat_masuk.php" method="post">
-                                    <button class="btn btn-primary" name="buttonEdit" value="">
-                                        Edit
-                                    </button>
-                                    <button class="btn btn-danger" name="buttonHapus" value="">
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>01-01-2021</td>
-                            <td>A000333</td>
-                            <td>OBH</td>
-                            <td>100</td>
-                            <td>Box</td>
-                            <td>
-                                <form action="../../config/action_edit_obat_masuk.php" method="post">
-                                    <button class="btn btn-primary" name="buttonEdit" value="">
-                                        Edit
-                                    </button>
-                                    <button class="btn btn-danger" name="buttonHapus" value="">
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
+                        <?php
+                            for($i = 1; $i <= 20; $i+=2) {
+                                $j = $i + 1;
+                                echo "
+                            <tr>
+                                <th scope='row'>$i</th>
+                                <td>01-01-2021</td>
+                                <td>A000111</td>
+                                <td>Paracetamol</td>
+                                <td>100</td>
+                                <td>Box</td>
+                                <td>
+                                    <form action='../../config/action_edit_obat_masuk.php' method='post'>
+                                        <button class='btn btn-primary' name='buttonEdit' value=''>
+                                            Edit
+                                        </button>
+                                        <button class='btn btn-danger' name='buttonHapus' value=''>
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope='row'>$j</th>
+                                <td>01-01-2021</td>
+                                <td>A000222</td>
+                                <td>Kapsida</td>
+                                <td>100</td>
+                                <td>Botol</td>
+                                <td>
+                                    <form action='../../config/action_edit_obat_masuk.php' method='post'>
+                                        <button class='btn btn-primary' name='buttonEdit' value=''>
+                                            Edit
+                                        </button>
+                                        <button class='btn btn-danger' name='buttonHapus' value=''>
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>";
+                            }
+                        ?>
                     </tbody>
                 </table>
             </div>
-
+            <button class="btn btn-primary" onclick="refreshPage();">Refresh</button>
         </div>
     </div>
 
@@ -184,6 +172,10 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+
+        function refreshPage() {
+            window.location.reload();
+        }
     </script>
 </body>
 

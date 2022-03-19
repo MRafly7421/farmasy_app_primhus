@@ -75,7 +75,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right menu__account__box" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item text-center menu__account__link" href="edit_profil.php">Edit Profil</a>
-                        <a class="dropdown-item text-center menu__account__link logout__link" href="../config/logout.php">Logout</a>
+                        <a class="dropdown-item text-center menu__account__link logout__link" href="../controller/logout.php">Logout</a>
                     </div>
                     
                 </div>

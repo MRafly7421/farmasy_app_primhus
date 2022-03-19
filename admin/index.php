@@ -44,6 +44,17 @@
                     </ul>
                 </li>
                 <li>
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
+                        <li>
+                            <a id="a" href="#">Tambah Data Obat Masuk</a>
+                        </li>
+                        <li>
+                            <a id="a" href="#">Cek Data Obat Masuk</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a id="a" href="#obatKeluarSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Obat Keluar</a>
                     <ul class="collapse list-unstyled" id="obatKeluarSubmenu">
                         <li>
@@ -91,7 +102,7 @@
                     </button>
                     <div class="dropdown-menu dropdown-menu-right menu__account__box" aria-labelledby="dropdownMenuButton">
                         <a class="dropdown-item text-center menu__account__link" href="#">Temp</a>
-                        <a class="dropdown-item text-center menu__account__link logout__link" href="../config/logout.php">Logout</a>
+                        <a class="dropdown-item text-center menu__account__link logout__link" href="../controller/logout.php">Logout</a>
                     </div>
                     
                 </div>

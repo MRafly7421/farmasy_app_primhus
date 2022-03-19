@@ -45,7 +45,7 @@
                 <h1>EDIT PROFIL</h1>
             </div>
         </div>
-        <form method="post" action="../config/action_edit_profil.php" class="row g-3 justify-content-center">
+        <form method="post" action="../controller/action_edit_profil.php" class="row g-3 justify-content-center">
             <div class="form-group col-10">
                 <label class="signup__label" for="idUser">User ID</label>
                 <input name="idUser" type="text" class="form-control" id="idUser" value="<?php echo $data['id_user']; ?>" readonly>

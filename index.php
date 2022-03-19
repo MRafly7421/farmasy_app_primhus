@@ -38,7 +38,7 @@
                     <h1 class="login__title">LOGIN</h1>
                 </div>
             </div>
-            <form method="post" action="config/action_login.php" class="row g-3 justify-content-center">
+            <form method="post" action="controller/action_login.php" class="row g-3 justify-content-center">
                 <div class="form-group col-8">
                     <div class="d-flex justify-content-center">
                         <label class="login__label" for="email">Email</label>
