@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Data Obat Masuk | Admin</title>
+    <title>Tambah Obat | Admin</title>
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="../../css/main.css?<?php echo time(); ?>">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
@@ -32,25 +32,25 @@
                 <li>
                     <a id="a" href="../">Dashboard</a>
                 </li>
-                <li class="active">
-                    <a id="a" href="#obatMasukSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Obat Masuk</a>
-                    <ul class="collapse list-unstyled show" id="obatMasukSubmenu">
+                <li>
+                    <a id="a" href="#obatMasukSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Obat Masuk</a>
+                    <ul class="collapse list-unstyled" id="obatMasukSubmenu">
                         <li>
-                            <a id="a" href="tambah_obat_masuk.php">Tambah Data Obat Masuk</a>
+                            <a id="a" href="../obat_masuk/tambah_obat_masuk.php">Tambah Data Obat Masuk</a>
                         </li>
-                        <li class="active">
-                            <a id="a" href="cek_obat_masuk.php">Cek Data Obat Masuk</a>
+                        <li>
+                            <a id="a" href="../cek_obat_masuk.php">Cek Data Obat Masuk</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
-                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
-                        <li>
-                            <a id="a" href="../sisa_obat/tambah_obat.php">Tambah Data Obat</a>
+                <li class="active">
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled show" id="sisaObatSubmenu">
+                        <li class="active">
+                            <a id="a" href="tambah_obat.php">Tambah Data Obat</a>
                         </li>
                         <li>
-                            <a id="a" href="../sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
+                            <a id="a" href="cek_sisa_obat.php">Cek Sisa Obat</a>
                         </li>
                     </ul>
                 </li>
@@ -108,69 +108,27 @@
                 </div>
             </nav>
 
-            <p style="font-weight: bold; font-size: 20px;">Data Obat Masuk</p>
+            <p style="font-weight: bold; font-size: 20px;">Tambah Data Obat</p>
 
-            <div class="table__box">
-                <table class="table table-striped table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">No.</th>
-                            <th scope="col">Tanggal</th>
-                            <th scope="col">Kode Obat</th>
-                            <th scope="col">Nama Obat</th>
-                            <th scope="col">Jumlah Masuk</th>
-                            <th scope="col">Satuan</th>
-                            <th scope="col">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                            for($i = 1; $i <= 20; $i+=2) {
-                                $j = $i + 1;
-                                echo "
-                        <tr>
-                            <th scope='row'>$i</th>
-                            <td>01-01-2021</td>
-                            <td>A000111</td>
-                            <td>Paracetamol</td>
-                            <td>100</td>
-                            <td>Box</td>
-                            <td>
-                                <form action='../../config/action_edit_obat_masuk.php' method='post'>
-                                    <button class='btn btn-primary' name='buttonEdit' value=''>
-                                        Edit
-                                    </button>
-                                    <button class='btn btn-danger' name='buttonHapus' value=''>
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope='row'>$j</th>
-                            <td>01-01-2021</td>
-                            <td>A000222</td>
-                            <td>Kapsida</td>
-                            <td>100</td>
-                            <td>Botol</td>
-                            <td>
-                                <form action='../../config/action_edit_obat_masuk.php' method='post'>
-                                    <button class='btn btn-primary' name='buttonEdit' value=''>
-                                        Edit
-                                    </button>
-                                    <button class='btn btn-danger' name='buttonHapus' value=''>
-                                        Hapus
-                                    </button>
-                                </form>
-                            </td>
-                        </tr>
-                                ";
-                            }
-                        ?>
-                    </tbody>
-                </table>
+            <div class="tambah__obat__masuk">
+                <form method="post" action="" class="row g-3 container-fluid">
+                    <div class="form-group col-8">
+                        <label for="kodeObat">Kode Obat</label>
+                        <input name="kodeObat" type="text" class="form-control" id="kodeObat" placeholder="Kode Obat">
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="namaObat">Nama Obat</label>
+                        <input name="namaObat" type="text" class="form-control" id="namaObat" placeholder="Nama Obat">
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="harga">Harga Obat</label>
+                        <input name="harga" type="number" class="form-control" id="harga" placeholder="Harga Obat">
+                    </div>
+                    <div class="form-group col-8">
+                        <button type="submit" class="btn btn-success" name="button" value="simpan">Simpan</button>
+                    </div>
+                </form>
             </div>
-            <button class="btn btn-primary" onclick="window.location.reload();">Refresh</button>
         </div>
     </div>
 

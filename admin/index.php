@@ -47,10 +47,10 @@
                     <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
                     <ul class="collapse list-unstyled" id="sisaObatSubmenu">
                         <li>
-                            <a id="a" href="#">Tambah Data Obat Masuk</a>
+                            <a id="a" href="sisa_obat/tambah_obat.php">Tambah Data Obat</a>
                         </li>
                         <li>
-                            <a id="a" href="#">Cek Data Obat Masuk</a>
+                            <a id="a" href="sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
                         </li>
                     </ul>
                 </li>

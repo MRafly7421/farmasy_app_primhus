@@ -44,6 +44,17 @@
                     </ul>
                 </li>
                 <li>
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
+                        <li>
+                            <a id="a" href="../sisa_obat/tambah_obat.php">Tambah Data Obat</a>
+                        </li>
+                        <li>
+                            <a id="a" href="../sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
                     <a id="a" href="#obatKeluarSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Obat Keluar</a>
                     <ul class="collapse list-unstyled" id="obatKeluarSubmenu">
                         <li>
@@ -112,7 +123,7 @@
                     <div class="form-row col-8">
                         <div class="form-group col-8">
                             <label for="jumlahObat">Jumlah</label>
-                            <input name="jumlahObat" type="text" class="form-control" id="jumlahObat" placeholder="Kode Obat">
+                            <input name="jumlahObat" type="number" class="form-control" id="jumlahObat" placeholder="Kode Obat">
                         </div>
                         <div class="form-group col">
                             <label for="satuan">Satuan</label>
@@ -121,9 +132,9 @@
                                 <option value="Botol">Botol</option>
                             </select>
                         </div>
-                        <div class="form-group col-8">
-                            <button type="submit" class="btn btn-success" name="button" value="simpan">Simpan</button>
-                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <button type="submit" class="btn btn-success" name="button" value="simpan">Simpan</button>
                     </div>
                 </form>
             </div>

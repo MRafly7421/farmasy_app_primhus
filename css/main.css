@@ -19,7 +19,7 @@ body {
 
 .header__box {
     background-color: #fff;
-    box-shadow: 0 0 5px #7c7c7c;
+    box-shadow: -5px 0 5px -5px #7c7c7c, 0 5px 5px -5px #7c7c7c, 5px 0 5px -5px #7c7c7c;
 }
 
 .header__brand {
@@ -113,9 +113,7 @@ body {
 }
 
 
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
+/* -- Sidebar style -- */
 
 .wrapper {
     display: flex;
@@ -203,9 +201,7 @@ ul.CTAs a {
 }
 
 
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
+/* -- content -- */
 
 #content {
     width: 100%;
@@ -213,11 +209,6 @@ ul.CTAs a {
     min-height: 100vh;
     transition: all 0.3s;
 }
-
-
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
 
 @media (max-width: 768px) {
     #sidebar {
@@ -230,6 +221,9 @@ ul.CTAs a {
         display: none;
     }
 }
+
+
+/* ---- */
 
 .menu__account__link {
     color: #fff;

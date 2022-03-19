@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Data Obat Masuk | Admin</title>
+    <title>Cek Sisa Obat | Admin</title>
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css?<?php echo time(); ?>">
     <link rel="stylesheet" type="text/css" href="../../css/main.css?<?php echo time(); ?>">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"></script>
@@ -32,25 +32,25 @@
                 <li>
                     <a id="a" href="../">Dashboard</a>
                 </li>
-                <li class="active">
-                    <a id="a" href="#obatMasukSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Obat Masuk</a>
-                    <ul class="collapse list-unstyled show" id="obatMasukSubmenu">
+                <li>
+                    <a id="a" href="#obatMasukSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Obat Masuk</a>
+                    <ul class="collapse list-unstyled" id="obatMasukSubmenu">
                         <li>
-                            <a id="a" href="tambah_obat_masuk.php">Tambah Data Obat Masuk</a>
+                            <a id="a" href="../obat_masuk/tambah_obat_masuk.php">Tambah Data Obat Masuk</a>
                         </li>
-                        <li class="active">
-                            <a id="a" href="cek_obat_masuk.php">Cek Data Obat Masuk</a>
+                        <li>
+                            <a id="a" href="../cek_obat_masuk.php">Cek Data Obat Masuk</a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
-                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
+                <li class="active">
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled show" id="sisaObatSubmenu">
                         <li>
-                            <a id="a" href="../sisa_obat/tambah_obat.php">Tambah Data Obat</a>
+                            <a id="a" href="tambah_obat.php">Tambah Data Obat</a>
                         </li>
-                        <li>
-                            <a id="a" href="../sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
+                        <li class="active">
+                            <a id="a" href="cek_sisa_obat.php">Cek Sisa Obat</a>
                         </li>
                     </ul>
                 </li>
@@ -108,35 +108,31 @@
                 </div>
             </nav>
 
-            <p style="font-weight: bold; font-size: 20px;">Data Obat Masuk</p>
+            <p style="font-weight: bold; font-size: 20px;">Data Sisa Obat</p>
 
             <div class="table__box">
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th scope="col">No.</th>
-                            <th scope="col">Tanggal</th>
                             <th scope="col">Kode Obat</th>
                             <th scope="col">Nama Obat</th>
-                            <th scope="col">Jumlah Masuk</th>
+                            <th scope="col">Harga</th>
+                            <th scope="col">Jumlah</th>
                             <th scope="col">Satuan</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                            for($i = 1; $i <= 20; $i+=2) {
-                                $j = $i + 1;
-                                echo "
                         <tr>
-                            <th scope='row'>$i</th>
-                            <td>01-01-2021</td>
+                            <th scope='row'>1</th>
                             <td>A000111</td>
                             <td>Paracetamol</td>
+                            <td>Rp 1000</td>
                             <td>100</td>
                             <td>Box</td>
                             <td>
-                                <form action='../../config/action_edit_obat_masuk.php' method='post'>
+                                <form action='' method='post'>
                                     <button class='btn btn-primary' name='buttonEdit' value=''>
                                         Edit
                                     </button>
@@ -147,14 +143,14 @@
                             </td>
                         </tr>
                         <tr>
-                            <th scope='row'>$j</th>
-                            <td>01-01-2021</td>
+                            <th scope='row'>2</th>
                             <td>A000222</td>
                             <td>Kapsida</td>
+                            <td>Rp 500</td>
                             <td>100</td>
                             <td>Botol</td>
                             <td>
-                                <form action='../../config/action_edit_obat_masuk.php' method='post'>
+                                <form action='' method='post'>
                                     <button class='btn btn-primary' name='buttonEdit' value=''>
                                         Edit
                                     </button>
@@ -164,9 +160,6 @@
                                 </form>
                             </td>
                         </tr>
-                                ";
-                            }
-                        ?>
                     </tbody>
                 </table>
             </div>
@@ -184,6 +177,10 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+
+        function refreshPage() {
+            window.location.reload();
+        }
     </script>
 </body>
 

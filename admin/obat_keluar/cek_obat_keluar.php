@@ -43,6 +43,17 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
+                        <li>
+                            <a id="a" href="../sisa_obat/tambah_obat.php">Tambah Data Obat</a>
+                        </li>
+                        <li>
+                            <a id="a" href="../sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="active">
                     <a id="a" href="#obatKeluarSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Obat Keluar</a>
                     <ul class="collapse list-unstyled show" id="obatKeluarSubmenu">
@@ -103,34 +114,56 @@
                 <table class="table table-striped table-hover">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">No.</th>
+                            <th scope="col">Tanggal</th>
+                            <th scope="col">Kode Obat</th>
+                            <th scope="col">Nama Obat</th>
+                            <th scope="col">Jumlah Keluar</th>
+                            <th scope="col">Satuan</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <th scope='row'>1</th>
+                            <td>01-01-2021</td>
+                            <td>A000111</td>
+                            <td>Paracetamol</td>
+                            <td>100</td>
+                            <td>Box</td>
+                            <td>
+                                <form action='' method='post'>
+                                    <button class='btn btn-primary' name='buttonEdit' value=''>
+                                        Edit
+                                    </button>
+                                    <button class='btn btn-danger' name='buttonHapus' value=''>
+                                        Hapus
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+                            <th scope='row'>2</th>
+                            <td>01-01-2021</td>
+                            <td>A000222</td>
+                            <td>Kapsida</td>
+                            <td>100</td>
+                            <td>Botol</td>
+                            <td>
+                                <form action='' method='post'>
+                                    <button class='btn btn-primary' name='buttonEdit' value=''>
+                                        Edit
+                                    </button>
+                                    <button class='btn btn-danger' name='buttonHapus' value=''>
+                                        Hapus
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <button class="btn btn-primary" onclick="window.location.reload();">Refresh</button>
         </div>
     </div>
 

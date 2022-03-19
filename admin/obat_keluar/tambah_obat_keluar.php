@@ -43,6 +43,17 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a id="a" href="#sisaObatSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sisa Obat</a>
+                    <ul class="collapse list-unstyled" id="sisaObatSubmenu">
+                        <li>
+                            <a id="a" href="../sisa_obat/tambah_obat.php">Tambah Data Obat</a>
+                        </li>
+                        <li>
+                            <a id="a" href="../sisa_obat/cek_sisa_obat.php">Cek Sisa Obat</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="active">
                     <a id="a" href="#obatKeluarSubmenu" data-toggle="collapse" aria-expanded="true" class="dropdown-toggle">Obat Keluar</a>
                     <ul class="collapse list-unstyled show" id="obatKeluarSubmenu">
@@ -99,29 +110,34 @@
 
             <p style="font-weight: bold; font-size: 20px;">Tambah Obat Keluar</p>
 
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="tambah__obat__masuk">
+                <form method="post" action="" class="row g-3 container-fluid">
+                    <div class="form-group col-8">
+                        <label for="kodeObat">Kode Obat</label>
+                        <input name="kodeObat" type="text" class="form-control" id="kodeObat" placeholder="Kode Obat">
+                    </div>
+                    <div class="form-group col-8">
+                        <label for="namaObat">Nama Obat</label>
+                        <input name="namaObat" type="text" class="form-control" id="namaObat" placeholder="Nama Obat">
+                    </div>
+                    <div class="form-row col-8">
+                        <div class="form-group col-8">
+                            <label for="jumlahObat">Jumlah</label>
+                            <input name="jumlahObat" type="number" class="form-control" id="jumlahObat" placeholder="Kode Obat">
+                        </div>
+                        <div class="form-group col">
+                            <label for="satuan">Satuan</label>
+                            <select name="satuan" id="satuan" class="form-control custom-select">
+                                <option value="Box">Box</option>
+                                <option value="Botol">Botol</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-8">
+                        <button type="submit" class="btn btn-success" name="button" value="simpan">Simpan</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
